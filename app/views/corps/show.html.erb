@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Corp no:</b>
+  <%= @corp.corp_no %>
+</p>
+
+<p>
+  <b>Corp name:</b>
+  <%= @corp.corp_name %>
+</p>
+
+<p>
+  <b>Corp add:</b>
+  <%= @corp.corp_add %>
+</p>
+
+<p>
+  <b>Corp tel:</b>
+  <%= @corp.corp_tel %>
+</p>
+
+<p>
+  <b>Corp fax:</b>
+  <%= @corp.corp_fax %>
+</p>
+
+
+<%= link_to 'Edit', edit_corp_path(@corp) %> |
+<%= link_to 'Back', corps_path %>

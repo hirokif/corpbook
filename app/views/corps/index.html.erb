@@ -1,0 +1,31 @@
+<h1>Listing corps</h1>
+
+<table>
+  <tr>
+    <th>Corp no</th>
+    <th>Corp name</th>
+    <th>Corp add</th>
+    <th>Corp tel</th>
+    <th>Corp fax</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @corps.each do |corp| %>
+  <tr>
+    <td><%= corp.corp_no %></td>
+    <td><%= corp.corp_name %></td>
+    <td><%= corp.corp_add %></td>
+    <td><%= corp.corp_tel %></td>
+    <td><%= corp.corp_fax %></td>
+    <td><%= link_to 'Show', corp %></td>
+    <td><%= link_to 'Edit', edit_corp_path(corp) %></td>
+    <td><%= link_to 'Destroy', corp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Corp', new_corp_path %>
