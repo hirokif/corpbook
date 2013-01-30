@@ -13,7 +13,7 @@
   </tr>
 
 <% @corps.each do |corp| %>
-  <tr>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td><%= corp.corp_no %></td>
     <td><%= corp.corp_name %></td>
     <td><%= corp.corp_add %></td>

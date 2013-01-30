@@ -1,3 +1,29 @@
 // Place all the styles related to the corps controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.corps {
+  table {
+    border-collapse: collapse;
+  }
+
+  table tr td {
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  .list_actions {
+    font-size:    x-small;
+    text-align:   right;
+    padding-left: 1em;
+  }
+
+  .list_line_even {
+    background:   #f5f5f5;
+  }
+
+  .list_line_odd {
+    background:   #fffafa;
+  }
+
+}
