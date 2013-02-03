@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Corpbook</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>須恵町一般競争入札資格審査登録</title>
+  <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body class='<%= controller.controller_name %>'>
-
-<%= yield %>
-
+<body class="<%= controller.controller_name %>">
+  <div id="banner">
+    <%= image_tag("logo.png") %>
+    <%= @page_title || "須恵町入札参加資格登録" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <ul>
+        <li><a href="http://www....">ホーム></a></li>
+        <li><a href="http://www..../faq">よくある質問></a></li>
+        <li><a href="http://www..../news">ニュース</a></li>
+        <li><a href="http://www..../contact">お問い合わせ</a></li>
+      </ul>
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>
-
