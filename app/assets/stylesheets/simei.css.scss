@@ -17,22 +17,28 @@
     margin-top: 1em;
     border-bottom: 1px dotted #77d;
     min-height: 100px;
-  }
 
-  h3 {
-    font-size: 120%;
-    font-family: sans-selif;
-    margin-left: 100px;
-    margin-top: 0;
-    margin-bottom: 2px;
-    color: #227;
-  }
+    .no {
+      font-family: sans-selif;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      color: #227;
+    }
 
-  p {
-    margin-left: 100px;
-    margin-top: 0.5em;
-    margin-bottom: 0.8em;
-  }
+    h3 {
+      font-size: 120%;
+      font-family: sans-serif;
+      margin-left: 50px;
+      margin-top: -1em;
+      margin-bottom: 2px;
+      color: #227;
+    }
 
+    p {
+      margin-left: 50px;
+      margin-top: 0.5em;
+      margin-bottom: 0.8em;
+    }
+
+  }
 }
-

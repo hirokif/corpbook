@@ -6,8 +6,8 @@
 
 <% @corps.each do |corp| %>
   <div class="entry">
-    <%= corp.corp_no %>
-    <h3><%= corp.corp_name %><h3>
-    <%= corp.corp_add %>
+    <span class ="no"><%= corp.corp_no %></span>
+    <h3><%= corp.corp_name %></h3>
+    <p><%= corp.corp_add %></p>
   </div>
 <% end %>
