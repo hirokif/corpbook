@@ -1,4 +1,7 @@
 Corpbook::Application.routes.draw do
+  resources :carts
+
+
   get "simei/index"
 
   resources :corps
