@@ -3,10 +3,10 @@
 <% end %>
 
 <h1>入札参加資格登録業者</h1>
-
 <% @corps.each do |corp| %>
   <div class="entry">
     <span class ="no"><%= corp.corp_no %></span>
+    <%= button_to '推薦する', line_items_path(corp_id: corp) %>
     <h3><%= corp.corp_name %></h3>
     <p><%= corp.corp_add %></p>
   </div>
