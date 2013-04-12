@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class Corp < ActiveRecord::Base
-  attr_accessible :corp_add, :corp_fax, :corp_name, :corp_no, :corp_tel
+  attr_accessible :corp_add, :corp_fax, :corp_name, :corp_no, :corp_tel, :corp_mail
 
   has_many :line_items
 
