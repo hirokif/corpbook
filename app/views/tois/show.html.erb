@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Toi no:</b>
+  <%= @toi.toi_no %>
+</p>
+
+<p>
+  <b>Toi name:</b>
+  <%= @toi.toi_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_toi_path(@toi) %> |
+<%= link_to 'Back', tois_path %>

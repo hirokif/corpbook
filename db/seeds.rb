@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 require "csv"
-
+=begin
 CSV.foreach('db/corps.csv') do |row|
   Corp.create(
 #   :id => row[0],
@@ -19,5 +19,13 @@ CSV.foreach('db/corps.csv') do |row|
 #   :created_at => row[6],
 #   :updated_at => row[7],
     :corp_mail => row[8]
+  )
+end
+=end
+CSV.foreach('db/corps2.csv') do |row|
+  Toi.create(
+#   :id => row[0],
+    :toi_no => row[0],
+    :toi_name => row[1]
   )
 end

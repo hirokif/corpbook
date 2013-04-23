@@ -1,4 +1,7 @@
 Corpbook::Application.routes.draw do
+  resources :tois
+
+
   resources :line_items
 
 

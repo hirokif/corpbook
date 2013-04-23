@@ -1,0 +1,25 @@
+<%= form_for(@toi) do |f| %>
+  <% if @toi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@toi.errors.count, "error") %> prohibited this toi from being saved:</h2>
+
+      <ul>
+      <% @toi.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :toi_no %><br />
+    <%= f.text_field :toi_no %>
+  </div>
+  <div class="field">
+    <%= f.label :toi_name %><br />
+    <%= f.text_field :toi_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
