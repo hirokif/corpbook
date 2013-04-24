@@ -3,7 +3,7 @@ class CorpsController < ApplicationController
   # GET /corps.json
   def index
    #@corps = Corp.all
-    @corps = Corp.find(:all, :order => "corp_no")
+    @corps = Corp.all(:order => "corp_no")
 
     respond_to do |format|
       format.html # index.html.erb
