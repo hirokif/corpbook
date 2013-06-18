@@ -6,8 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+# 'rake db:seed' でcsvファイルをインポート
+
 require "csv"
-=begin
+
 CSV.foreach('db/corps.csv') do |row|
   Corp.create(
 #   :id => row[0],
@@ -21,8 +24,9 @@ CSV.foreach('db/corps.csv') do |row|
     :corp_mail => row[8]
   )
 end
-=end
-CSV.foreach('db/corps2.csv') do |row|
+
+begin
+CSV.foreach('db/tois.csv') do |row|
   Toi.create(
 #   :id => row[0],
     :toi_no => row[0],
