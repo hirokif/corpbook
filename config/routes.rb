@@ -1,4 +1,7 @@
 Corpbook::Application.routes.draw do
+  resources :grps
+
+
   resources :tois
 
 

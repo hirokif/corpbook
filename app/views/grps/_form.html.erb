@@ -1,0 +1,21 @@
+<%= form_for(@grp) do |f| %>
+  <% if @grp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grp.errors.count, "error") %> prohibited this grp from being saved:</h2>
+
+      <ul>
+      <% @grp.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :grp_name %><br />
+    <%= f.text_field :grp_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
