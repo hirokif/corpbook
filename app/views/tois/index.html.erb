@@ -2,15 +2,19 @@
 
 <table>
   <tr>
+    <th>grp_id</th>
+    <th>grp_name</th>
     <th>Toi no</th>
     <th>Toi name</th>
-    <th></th>
-    <th></th>
-    <th></th>
+		<th></th>
+		<th></th>
+		<th></th>
   </tr>
 
 <% @tois.each do |toi| %>
   <tr>
+    <td><%= toi.grp_id %></td>
+    <td><%= toi.grp.grp_name %></td>
     <td><%= toi.toi_no %></td>
     <td><%= toi.toi_name %></td>
     <td><%= link_to 'Show', toi %></td>

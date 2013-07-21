@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :grp_name %><br />
+    <%#= f.text_field :grp_id %>
+    <%= f.collection_select :grp_id, Grp.all, :id, :grp_name %>
+  </div>
+  <div class="field">
     <%= f.label :toi_no %><br />
     <%= f.text_field :toi_no %>
   </div>

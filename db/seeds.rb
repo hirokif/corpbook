@@ -25,11 +25,11 @@ CSV.foreach('db/corps.csv') do |row|
   )
 end
 
-begin
 CSV.foreach('db/tois.csv') do |row|
   Toi.create(
 #   :id => row[0],
     :toi_no => row[0],
-    :toi_name => row[1]
+    :toi_name => row[1],
+		:grp_id => row[2]
   )
 end
