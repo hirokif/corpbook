@@ -1,5 +1,6 @@
 class Toi < ActiveRecord::Base
-  attr_accessible :toi_name, :toi_no, :grp_id
+  attr_accessible :toi_name, :toi_no, :grp_no
 
-	belongs_to :grp
+  #id以外の外部キーを設定
+  belongs_to :grp, :foreign_key => 'grp_no'
 end

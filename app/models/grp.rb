@@ -1,5 +1,5 @@
 class Grp < ActiveRecord::Base
-  attr_accessible :grp_name
+  attr_accessible :grp_name, :grp_no
 	
 	has_many :tois
 

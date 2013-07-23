@@ -13,23 +13,26 @@ require "csv"
 
 CSV.foreach('db/corps.csv') do |row|
   Corp.create(
-#   :id => row[0],
-    :corp_no => row[1],
-    :corp_name => row[2],
-    :corp_add => row[3],
-    :corp_tel => row[4],
-    :corp_fax => row[5],
-#   :created_at => row[6],
-#   :updated_at => row[7],
-    :corp_mail => row[8]
+    :corp_no => row[0],
+    :corp_name => row[1],
+    :corp_add => row[2],
+    :corp_tel => row[3],
+    :corp_fax => row[4],
+    :corp_mail => row[7]
   )
 end
 
 CSV.foreach('db/tois.csv') do |row|
   Toi.create(
-#   :id => row[0],
     :toi_no => row[0],
     :toi_name => row[1],
-		:grp_id => row[2]
+		:grp_no => row[2]
   )
+end
+
+CSV.foreach('db/grps.csv') do |row|
+  Grp.create(
+    :grp_no => row[0],
+    :grp_name => row[1]
+    )
 end
