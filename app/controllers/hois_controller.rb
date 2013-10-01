@@ -1,0 +1,2 @@
+class HoisController < ApplicationController
+end

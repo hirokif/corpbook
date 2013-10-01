@@ -15,6 +15,8 @@ Corpbook::Application.routes.draw do
 
   resources :corps
 
+  resources :hois
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
