@@ -8,7 +8,7 @@
 
 
 # 'rake db:seed' でcsvファイルをインポート
-
+# (db削除して初めからするときは　'rake db:migrate:reset')
 require "csv"
 
 CSV.foreach('db/corps.csv') do |row|

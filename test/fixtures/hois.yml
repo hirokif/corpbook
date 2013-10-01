@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  corp_no: 1
+  pc: false
+  toi_id: 1
+  pp: 1
+  mr: 1
+  egr_fr: 1
+  egr_bb: 1
+  egr_sr: 1
+  egr_or: 1
+
+two:
+  corp_no: 1
+  pc: false
+  toi_id: 1
+  pp: 1
+  mr: 1
+  egr_fr: 1
+  egr_bb: 1
+  egr_sr: 1
+  egr_or: 1

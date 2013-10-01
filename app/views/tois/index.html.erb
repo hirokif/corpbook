@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Toi_id</th>
     <th>grp_no</th>
     <th>grp_name</th>
     <th>Toi no</th>
@@ -13,6 +14,7 @@
 
 <% @tois.each do |toi| %>
   <tr>
+    <td><%= toi.id %></td>
     <td><%= toi.grp_no %></td>
     <td><%= toi.grp.grp_name %></td>
     <td><%= toi.toi_no %></td>
