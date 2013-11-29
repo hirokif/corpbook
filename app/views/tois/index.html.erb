@@ -2,10 +2,10 @@
 
 <table>
   <tr>
-    <th>Toi_id</th>
+<!--<th>Toi_id</th>-->
     <th>grp_no</th>
-    <th>grp_name</th>
     <th>Toi no</th>
+    <th>grp_name</th>
     <th>Toi name</th>
 		<th></th>
 		<th></th>
@@ -14,10 +14,10 @@
 
 <% @tois.each do |toi| %>
   <tr>
-    <td><%= toi.id %></td>
+<!--<td><%= toi.id %></td>-->
     <td><%= toi.grp_no %></td>
-    <td><%= toi.grp.grp_name %></td>
     <td><%= toi.toi_no %></td>
+    <td><%= toi.grp.grp_name %></td>
     <td><%= toi.toi_name %></td>
     <td><%= link_to 'Show', toi %></td>
     <td><%= link_to 'Edit', edit_toi_path(toi) %></td>

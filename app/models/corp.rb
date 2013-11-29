@@ -3,7 +3,8 @@
 class Corp < ActiveRecord::Base
   attr_accessible :corp_add, :corp_fax, :corp_name, :corp_no, :corp_tel, :corp_mail
 
-  has_many :line_items, :hois
+  has_many :line_items
+  has_many :hois
 
   before_destroy :ensure_not_referenced_by_any_line_item
 

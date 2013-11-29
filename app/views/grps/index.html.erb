@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Grp no</th>
     <th>Grp name</th>
     <th></th>
     <th></th>
@@ -10,6 +11,7 @@
 
 <% @grps.each do |grp| %>
   <tr>
+    <td><%= grp.grp_no %></td>
     <td><%= grp.grp_name %></td>
     <td><%= link_to 'Show', grp %></td>
     <td><%= link_to 'Edit', edit_grp_path(grp) %></td>
