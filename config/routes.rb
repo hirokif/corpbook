@@ -13,9 +13,13 @@ Corpbook::Application.routes.draw do
 
   get "simei/index"
 
-  resources :corps
+# resources :corps
 
-  resources :hois
+ resources :corps do
+   resources :hois
+ end
+
+# resources :hois
 
 
   # The priority is based upon order of creation:

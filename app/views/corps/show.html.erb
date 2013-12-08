@@ -30,5 +30,20 @@
   <%= @corp.corp_mail %>
 </p>
 
+<p>
+  <b>希望業種:</b>
+</p>
+
+<ul>
+<% @corp.hois.each do |hoi| %>
+<li>
+  <%= hoi.corp_no %>
+  <%= hoi.toi_no %>
+  <%= Toi.find(hoi.toi_no).toi_name %>
+</li>
+<% end %>
+</ul>
+<%= link_to '希望業種追加', new_corp_hoi_path(@corp) %> <br>
+
 <%= link_to 'Edit', edit_corp_path(@corp) %> |
 <%= link_to 'Back', corps_path %>
