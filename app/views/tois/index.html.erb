@@ -1,12 +1,12 @@
-<h1>Listing tois</h1>
+<h1>業種リスト　tois(tipes of industry)</h1>
+<!-- <h1>Listing hois</h1> -->
 
 <table>
   <tr>
-<!--<th>Toi_id</th>-->
-    <th>grp_no</th>
-    <th>Toi no</th>
+    <th>toi_no</th>
     <th>grp_name</th>
-    <th>Toi name</th>
+    <th>toi_name</th>
+    <th>grp_name</th>
 		<th></th>
 		<th></th>
 		<th></th>
@@ -14,10 +14,8 @@
 
 <% @tois.each do |toi| %>
   <tr>
-<!--<td><%= toi.id %></td>-->
-    <td><%= toi.grp_no %></td>
     <td><%= toi.toi_no %></td>
-    <td><%= toi.grp.grp_name %></td>
+    <td><%= Grp.find(toi.grp_no).grp_name %></td>
     <td><%= toi.toi_name %></td>
     <td><%= link_to 'Show', toi %></td>
     <td><%= link_to 'Edit', edit_toi_path(toi) %></td>

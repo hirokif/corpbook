@@ -15,11 +15,13 @@ Corpbook::Application.routes.draw do
 
 # resources :corps
 
- resources :corps do
-   resources :hois
- end
+
+  resources :corps do
+    resources :hois
+  end
 
 # resources :hois
+# resources :hois, :only => [ :index ]
 
 
   # The priority is based upon order of creation:

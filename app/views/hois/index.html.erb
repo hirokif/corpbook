@@ -1,38 +1,38 @@
-<h1>Listing hois</h1>
+<h1> Listing hois</h1>
+<h1><%= @corp.corp_name %></h1>
+
+<p>建設工事等</p>
 
 <table>
   <tr>
-    <th>corp_no:受付番号</th>
-    <th>pc：許可区分</th>
-    <th>toi_id：業種</th>
-    <th>pp：Ｐ点</th>
-    <th>mr：平均完成工事高（千円）</th>
-    <th>egr_fr：１級技術者数</th>
-    <th>egr_bb：基幹技術者数</th>
-    <th>egr_sr：２級技術者数</th>
-    <th>egr_or：その他技術者数</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>hoi:id</th>
+    <th>corp:no</th>
+    <th>分類</th>
+    <th>業種</th>
+    <th>許可区分</th>
+    <th>Ｐ点</th>
+    <th>平均完成工事高（千円）</th>
+    <th>１級技術者数</th>
+    <th>基幹技術者数</th>
+    <th>２級技術者数</th>
+    <th>その他技術者数</th>
+    <th>備考</th>
   </tr>
+
 <% @hois.each do |hoi| %>
   <tr>
-    <td><%= hoi.corp_no %></td>
+    <td><%= hoi.id %></td>
+    <td><%= hoi.corp.corp_no %></td>
+    <td><%= hoi.toi.grp.grp_name %></td>
+    <td><%= hoi.toi.toi_name %></td>
     <td><%= hoi.pc %></td>
-    <td><%= hoi.toi_id %></td>
     <td><%= hoi.pp %></td>
     <td><%= hoi.mr %></td>
     <td><%= hoi.egr_fr %></td>
     <td><%= hoi.egr_bb %></td>
     <td><%= hoi.egr_sr %></td>
     <td><%= hoi.egr_or %></td>
-    <td><%= link_to 'Show', hoi %></td>
-    <td><%= link_to 'Edit', edit_hoi_path(hoi) %></td>
-    <td><%= link_to 'Destroy', hoi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= hoi.note %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Hoi', new_hoi_path %>

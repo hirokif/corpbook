@@ -1,0 +1,44 @@
+<h1>Listing hois</h1>
+<h1><%= @corp.corp_name %></h1>
+
+<table>
+  <tr>
+    <th>hoi:id</th>
+    <th>corp_no:受付番号</th>
+    <th>pc：許可区分</th>
+    <th>toi_no：業種</th>
+    <th>pp：Ｐ点</th>
+    <th>mr：平均完成工事高（千円）</th>
+    <th>egr_fr：１級技術者数</th>
+    <th>egr_bb：基幹技術者数</th>
+    <th>egr_sr：２級技術者数</th>
+    <th>egr_or：その他技術者数</th>
+    <th>note：note</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hois.each do |hoi| %>
+  <tr>
+    <td><%= hoi.id %></td>
+    <td><%= hoi.corp_no %></td>
+    <td><%= hoi.pc %></td>
+    <td><%= hoi.toi_no %></td>
+    <td><%= hoi.pp %></td>
+    <td><%= hoi.mr %></td>
+    <td><%= hoi.egr_fr %></td>
+    <td><%= hoi.egr_bb %></td>
+    <td><%= hoi.egr_sr %></td>
+    <td><%= hoi.egr_or %></td>
+    <td><%= hoi.note %></td>
+    <td><%= link_to 'Show', corp_hois_path(hoi) %></td>
+    <td><%= link_to 'Edit', edit_corp_hoi_path(hoi) %></td>
+    <td><%= link_to 'Destroy', hoi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hoi', new_corp_hoi %>

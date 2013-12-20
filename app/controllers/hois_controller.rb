@@ -1,6 +1,7 @@
 class HoisController < ApplicationController
   def index
-    @hois = Hoi.all
+    @corp = Corp.find(params[:corp_id])
+    @hois = @corp.hois
 
     respond_to do |format|
       format.html # index.html.erb
