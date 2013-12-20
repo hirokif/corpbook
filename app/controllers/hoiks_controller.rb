@@ -5,61 +5,61 @@ class HoiksController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @hois }
+      format.json { render json: @hoiks }
     end
   end
 
-# GET /hois/1
-  # GET /hois/1.json
+# GET /hoiks/1
+  # GET /hoiks/1.json
   def show
     @hoik = Hoik.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @hoi }
+      format.json { render json: @hoik }
     end
   end
 
-  # GET /hois/new
-  # GET /hois/new.json
+  # GET /hoiks/new
+  # GET /hoiks/new.json
   def new
     @hoik = Hoik.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @hoi }
+      format.json { render json: @hoik }
     end
   end
 
-  # GET /hois/1/edit
+  # GET /hoiks/1/edit
   def edit
     @hoik = Hoik.find(params[:id])
   end
 
-  # POST /hois
-  # POST /hois.json
+  # POST /hoiks
+  # POST /hoiks.json
   def create
     @corp = Corp.find(params[:corp_no])
-    @hoik = @corp.hoiks.create(params[:hoi])
+    @hoik = @corp.hoiks.create(params[:hoik])
     redirect_to corp_path(@corp.id)
 #   respond_to do |format|
-#     if @hoi.save
-#       format.html { redirect_to @hoi, notice: 'Hoi was successfully created.' }
-#       format.json { render json: @hoi, status: :created, location: @hoi }
+#     if @hoik.save
+#       format.html { redirect_to @hoik, notice: 'Hoi was successfully created.' }
+#       format.json { render json: @hoik, status: :created, location: @hoik }
 #     else
 #       format.html { render action: "new" }
-#       format.json { render json: @hoi.errors, status: :unprocessable_entity }
+#       format.json { render json: @hoik.errors, status: :unprocessable_entity }
 #     end
 #   end
   end
 
-  # PUT /hois/1
-  # PUT /hois/1.json
+  # PUT /hoiks/1
+  # PUT /hoiks/1.json
   def update
     @hoik = Hoik.find(params[:id])
 
     respond_to do |format|
-      if @hoik.update_attributes(params[:hoi])
+      if @hoik.update_attributes(params[:hoik])
         format.html { redirect_to @hoik, notice: 'Hoi was successfully updated.' }
         format.json { head :no_content }
       else
@@ -69,14 +69,14 @@ class HoiksController < ApplicationController
     end
   end
 
-  # DELETE /hois/1
-  # DELETE /hois/1.json
+  # DELETE /hoiks/1
+  # DELETE /hoiks/1.json
   def destroy
     @hoik = Hoik.find(params[:id])
     @hoik.destroy
 
     respond_to do |format|
-      format.html { redirect_to hois_url }
+      format.html { redirect_to hoiks_url }
       format.json { head :no_content }
     end
   end
