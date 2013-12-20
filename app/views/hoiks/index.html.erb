@@ -1,0 +1,38 @@
+<h1> Listing hoiks</h1>
+<h1><%= @corp.corp_name %></h1>
+
+<p>建設工事等</p>
+
+<table>
+  <tr>
+    <th>hoik:id</th>
+    <th>corp:no</th>
+    <th>分類</th>
+    <th>業種</th>
+    <th>許可区分</th>
+    <th>Ｐ点</th>
+    <th>平均完成工事高（千円）</th>
+    <th>１級技術者数</th>
+    <th>基幹技術者数</th>
+    <th>２級技術者数</th>
+    <th>その他技術者数</th>
+    <th>備考</th>
+  </tr>
+
+<% @hoiks.each do |hoik| %>
+  <tr>
+    <td><%= hoik.id %></td>
+    <td><%= hoik.corp.corp_no %></td>
+    <td><%= hoik.toi.grp.grp_name %></td>
+    <td><%= hoik.toi.toi_name %></td>
+    <td><%= hoik.pc %></td>
+    <td><%= hoik.pp %></td>
+    <td><%= hoik.mr %></td>
+    <td><%= hoik.egr_fr %></td>
+    <td><%= hoik.egr_bb %></td>
+    <td><%= hoik.egr_sr %></td>
+    <td><%= hoik.egr_or %></td>
+    <td><%= hoik.note %></td>
+  </tr>
+<% end %>
+</table>

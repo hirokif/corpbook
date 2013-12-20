@@ -17,7 +17,7 @@ Corpbook::Application.routes.draw do
 
 
   resources :corps do
-    resources :hois
+    resources :hoiks
   end
 
 # resources :hois

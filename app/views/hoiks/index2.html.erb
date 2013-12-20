@@ -1,0 +1,44 @@
+<h1>Listing hoiks</h1>
+<h1><%= @corp.corp_name %></h1>
+
+<table>
+  <tr>
+    <th>hoik:id</th>
+    <th>corp_no:受付番号</th>
+    <th>pc：許可区分</th>
+    <th>toi_no：業種</th>
+    <th>pp：Ｐ点</th>
+    <th>mr：平均完成工事高（千円）</th>
+    <th>egr_fr：１級技術者数</th>
+    <th>egr_bb：基幹技術者数</th>
+    <th>egr_sr：２級技術者数</th>
+    <th>egr_or：その他技術者数</th>
+    <th>note：note</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hoiks.each do |hoik| %>
+  <tr>
+    <td><%= hoik.id %></td>
+    <td><%= hoik.corp_no %></td>
+    <td><%= hoik.pc %></td>
+    <td><%= hoik.toi_no %></td>
+    <td><%= hoik.pp %></td>
+    <td><%= hoik.mr %></td>
+    <td><%= hoik.egr_fr %></td>
+    <td><%= hoik.egr_bb %></td>
+    <td><%= hoik.egr_sr %></td>
+    <td><%= hoik.egr_or %></td>
+    <td><%= hoik.note %></td>
+    <td><%= link_to 'Show', corp_hoiks_path(hoik) %></td>
+    <td><%= link_to 'Edit', edit_corp_hoik_path(hoik) %></td>
+    <td><%= link_to 'Destroy', hoik, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New hoik', new_corp_hoik %>

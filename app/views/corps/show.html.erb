@@ -44,14 +44,14 @@
 </p>
 
 <ul>
-<% @corp.hois.each do |hoi| %>
+<% @corp.hoiks.each do |hoik| %>
 <li>
-  <%= hoi.corp_no %>
-  <%= hoi.toi_no %>
-  <%= Toi.find(hoi.toi_no).toi_name %>
+  <%= hoik.corp_no %>
+  <%= hoik.toi_no %>
+  <%= Toi.find(hoik.toi_no).toi_name %>
 </li>
 <% end %>
 </ul>
-<%= link_to '希望業種一覧', corp_hois_path(@corp) %> |
+<%= link_to '希望業種一覧', corp_hoiks_path(@corp) %> |
 <%= link_to 'Edit', edit_corp_path(@corp) %> |
 <%= link_to 'Back', corps_path %>
