@@ -3,4 +3,5 @@ class Toi < ActiveRecord::Base
 
   #id以外の外部キーを設定
   belongs_to :grp, :foreign_key => 'grp_no'
+  has_many :hoiks, :foreign_key => 'toi_no'
 end
