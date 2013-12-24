@@ -26,21 +26,20 @@
 </p>
 
 <p>
-  <b>mail:</b>
-  <%= @corp.corp_mail %>
+  <b>mail:</b>  <%= @corp.corp_mail %>
 </p>
 
 <p>
-  <b>希望業種:ーーーーーー</b>
+  <b>希望業種:</b>
 </p>
-<p>
-  <b>建設工事等:</b>
+<p>建設工事等:(<%= @corp.hoiks.count %> )
+<%= link_to '詳細', corp_hoiks_path(@corp) %>
 </p>
-<p>
-  <b>建設コンサルタント等:</b>
+<p>建設コンサルタント等:
+<%= link_to '詳細', corp_hoiks_path(@corp) %>
 </p>
-<p>
-  <b>物品役務等:</b>
+<p>物品役務等:
+<%= link_to '詳細', corp_hoiks_path(@corp) %>
 </p>
 
 <ul>
@@ -52,6 +51,5 @@
 </li>
 <% end %>
 </ul>
-<%= link_to '希望業種一覧', corp_hoiks_path(@corp) %> |
 <%= link_to 'Edit', edit_corp_path(@corp) %> |
 <%= link_to 'Back', corps_path %>
