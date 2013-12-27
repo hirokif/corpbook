@@ -7,16 +7,18 @@
   <tr>
     <th>hoik:id</th>
     <th>corp:no</th>
-    <th>分類</th>
-    <th>業種</th>
-    <th>許可区分</th>
-    <th>Ｐ点</th>
-    <th>平均完成工事高（千円）</th>
-    <th>１級技術者数</th>
-    <th>基幹技術者数</th>
-    <th>２級技術者数</th>
-    <th>その他技術者数</th>
+    <th>分類grp_name</th>
+    <th>業種toi_name</th>
+    <th>許可区分pc</th>
+    <th>Ｐ点pp</th>
+    <th>平均完成工事高（千円）mr</th>
+    <th>１級技術者数egr_fr</th>
+    <th>基幹技術者数egr_bb</th>
+    <th>２級技術者数egr_sr</th>
+    <th>その他技術者数egr_or</th>
     <th>備考</th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @hoiks.each do |hoik| %>
@@ -33,6 +35,8 @@
     <td><%= hoik.egr_sr %></td>
     <td><%= hoik.egr_or %></td>
     <td><%= hoik.note %></td>
+    <td><%= link_to 'Edit', edit_corp_hoik_path(hoik.id) %></td>
+    <td><%= link_to 'Destroy', hoik, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
